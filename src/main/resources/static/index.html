@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Graph Job Matcher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+<header class="navbar">
+    <h2>Job Matcher Pro</h2>
+    <span class="badge">Powered by Memgraph & Gemini</span>
+</header>
+
+<div class="layout">
+    <aside class="sidebar">
+        <h3>Workflows</h3>
+        <button class="nav-btn" onclick="loadCompanyWorkflow(0)">🏢 Company View</button>
+        <button class="nav-btn" onclick="loadStudentWorkflow()">🎓 Student View</button>
+    </aside>
+
+    <main class="content">
+        <div id="main-content">
+            <h2>Welcome to Job Matcher Pro</h2>
+            <p>Select a workflow from the sidebar to begin exploring the graph data and generating AI recommendations.</p>
+        </div>
+    </main>
+</div>
+
+<div id="info-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title">Entity Details</h3>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
